@@ -8,7 +8,7 @@ $(document).ready(function() {
       success: function(gists) {
          gists.forEach(function(gist) {
             if (gist.description.indexOf('#post') > -1) {
-            var a$ = $('<a href ="' + gist.url + '">' + gist.description.slice(6) + '</a>');
+            var $a = $('<a href ="' + gist.url + '">' + gist.description.slice(6) + '</a>');
             $('#posts').append($('<li></li>').append($a));
             $a.on('click', function(event) {
                event.prevenDefault();
